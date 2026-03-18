@@ -1,0 +1,227 @@
+/* ===== RESET ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Georgia", serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a2f24, #051914);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== TOP NAV ===== */
+
+.top-nav {
+  padding: 25px 0;
+}
+
+.top-nav nav {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.top-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.top-nav a:hover,
+.top-nav a.active {
+  border-bottom: 1px solid white;
+}
+
+/* ===== REGISTER CARD ===== */
+
+.register-container {
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+  padding: 45px 40px;
+
+  border-radius: 16px;
+
+  /* GLASS EFFECT */
+  background: rgba(18, 52, 43, 0.55);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+
+  text-align: center;
+
+  animation: fadeUp 0.6s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== LOGO ===== */
+
+.register-container .logo {
+  width: 110px;
+  margin-bottom: 20px;
+  opacity: 0.95;
+}
+
+.register-container h1 {
+  font-size: 30px;
+  letter-spacing: 3px;
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+
+/* ===== FORM ===== */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  margin-bottom: 7px;
+  opacity: 0.8;
+}
+
+/* ===== INPUTS ===== */
+
+.form-group input,
+.register-container select {
+  padding: 13px 14px;
+
+  border-radius: 8px;
+  border: 1px solid transparent;
+
+  background: rgba(10, 47, 36, 0.85);
+  color: white;
+  font-size: 14px;
+
+  transition: 0.25s ease;
+}
+
+/* Hover */
+
+.form-group input:hover,
+.register-container select:hover {
+  border-color: rgba(213, 150, 99, 0.4);
+}
+
+/* Focus */
+
+.form-group input:focus,
+.register-container select:focus {
+  outline: none;
+  border-color: #d59663;
+  background: rgba(10, 47, 36, 1);
+}
+
+/* Placeholder */
+
+.form-group input::placeholder {
+  color: #bdbdbd;
+}
+
+/* ===== BUTTON ===== */
+
+.register-container button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 15px;
+
+  border-radius: 10px;
+  border: none;
+
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  font-size: 15px;
+
+  color: white;
+
+  background: linear-gradient(135deg, #d59663, #b97c4d);
+
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+/* Hover */
+
+.register-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.45);
+}
+
+/* Active click */
+
+.register-container button:active {
+  transform: translateY(0);
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 480px) {
+  .register-container {
+    margin: 30px 18px;
+    padding: 35px 22px;
+  }
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding-right: 44px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  font-size: 18px;
+  line-height: 1;
+
+  color: #bdbdbd;
+  cursor: pointer;
+
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.toggle-password:hover {
+  color: #d59663;
+  transform: scale(1.1);
+}

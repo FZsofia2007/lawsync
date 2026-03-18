@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Georgia", serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #0a2f24;
+  color: white;
+}
+
+    /* FELSŐ MENÜ */
+.top-nav {
+  padding: 25px 0;
+}
+
+.top-nav nav {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.top-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.top-nav a:hover {
+  border-bottom: 1px solid white;
+}
+
+/* AKTÍV OLDAL */
+.top-nav a.active {
+  border-bottom: 1px solid white;
+}
+
+/* KÖZÉPSŐ CÍM */
+.page-center {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-center h1 {
+  font-size: 72px;
+  letter-spacing: 4px;
+  font-weight: normal;
+}
